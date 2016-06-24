@@ -1,3 +1,3 @@
 # paliwalgaurav.github.io
 
-Peronal website!!
+Peronal!!
