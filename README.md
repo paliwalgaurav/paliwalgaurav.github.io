@@ -1,3 +1,0 @@
-# paliwalgaurav.github.io
-
-Peronal!!

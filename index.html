@@ -1,21 +1,104 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="https://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/alphabet.js"></script>
-  </head>
-  <body>
-    <canvas style="text-align: center" id="myCanvas"></canvas>
-    <ul style="list-style-type: none;text-align: center">
-      <li>© 2017 Gaurav Paliwal</li>
-        <li>
-          <a href="https://www.facebook.com/1gauravpaliwal">Facebook</a>
-          <a href="https://twitter.com/Gaurav4Paliwal">Twitter</a>
-          <a href="https://github.com/paliwalgaurav">Github</a>
-          <a href="mailto:paliwal.gaurav@outlook.com">Write to me</a>
-        </li>
-    </ul>
-    <script type="text/javascript" src="https://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/bubbles.js"></script>
-    <script type="text/javascript" src="main.js"></script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.75"/>
+
+  <title>Gaurav Paliwal</title>
+
+  <style type="text/css">
+	:root {
+	  --font_color: #0f0;
+	  --background_color: #000;
+	}
+	html,
+	body {
+	  font-family: Courier, 'sans-serif';
+	  margin: 0;
+	  padding: 0;
+	  background: var(--background_color);
+	  color: var(--font_color);
+	  height: 100vh;
+	  width: 100vw;
+	  overflow: hidden;
+	  letter-spacing: 1px;
+	  line-height: 1.5;
+	}
+
+	header {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  padding: 0 4px;
+
+	  background: #aaa;
+	  height: 2vh;
+	  color: var(--background_color);
+	}
+
+	footer {
+	  position: absolute;
+	  bottom: 0;
+	  width: 100vw;
+	  display: flex;
+	  justify-content: space-between;
+	}
+
+	a {
+	  color: var(--font_color);
+	}
+
+	.external {
+	  padding-top: 32px;
+	}
+	.external a {
+	  display: block;
+	  width: 150px;
+	}
+
+	.external a:hover {
+	  padding-left: 8px;
+	  transition: all ease-out 250ms;
+	}
+  </style>
+</head>
+
+<body>
+<header>
+  <div id="timer"></div>
+  <div>Welcome, Stranger!</div>
+  <div>&#8984;1</div>
+</header>
+
+<div>
+  <h2>>$ whois 'Gaurav Paliwal'</h2>
+  <h3>
+    He is a Software Artist,
+    <a target="_blank" href="https://500px.com/thegauravsphotgraphy"> photographer,</a> thinker, dreamer and crazy guy!
+    <br/>Lives in India...
+  </h3>
+</div>
+
+<div class="external">
+  <strong>Reach him out.</strong>
+  <a target="_blank" href="https://github.com/paliwalgaurav">Github</a>
+  <a target="_blank" href="https://linkedin.com/gauravpaliwal1">LinkedIn</a>
+  <a target="_blank" href="https://stackoverflow.com/gaurav-paliwal">StackOverflow</a>
+  <a target="_blank" href="https://www.facebook.com/1gauravpaliwal">Facebook</a>
+  <a target="_blank" href="https://twitter.com/Gaurav4Paliwal">Twitter</a>
+  <a target="_blank" href="mailto:paliwal.gaurav@outlook.com">Write to me</a>
+</div>
+
+<footer>
+  <div>© 2019 Gaurav Paliwal</div>
+  <div>WIP: interactions</div>
+</footer>
+
+<script>
+  (() => {
+	document.getElementById('timer').innerText = new Date().toUTCString();
+	setInterval(() => document.getElementById('timer').innerText = new Date().toUTCString(), 1000)
+  })();
+</script>
+</body>
 </html>
